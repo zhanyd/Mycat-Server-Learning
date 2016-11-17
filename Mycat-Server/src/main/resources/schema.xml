@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<!DOCTYPE mycat:schema SYSTEM "schema.dtd">
+<mycat:schema xmlns:mycat="http://io.mycat/">
+
+	<schema name="TESTDB" checkSQLschema="false">
+		<!-- auto sharding by id (long) -->
+		<!-- <table name="travelrecord" dataNode="dn1,dn2,dn3" rule="auto-sharding-long" /> -->
+
+		<!-- global table is auto cloned to all defined data nodes ,so can join
+			with any table whose sharding node is in the same data node -->
+		<!-- <table name="company" primaryKey="ID" type="global" dataNode="dn1,dn2" />
+		<table name="goods" primaryKey="ID" type="global" dataNode="dn1,dn2" />
+		random sharding using mod sharind rule
+		<table name="hotnews" primaryKey="ID" autoIncrement="true" dataNode="dn1,dn2"
+			   rule="mod-long" /> -->
+		<!-- <table name="dual" primaryKey="ID" dataNode="dnx,dnoracle2" type="global"
+			needAddLimit="false"/> <table name="worker" primaryKey="ID" dataNode="jdbc_dn1,jdbc_dn2,jdbc_dn3"
+			rule="mod-long" /> -->
+		<!-- <table name="customer" primaryKey="ID" dataNode="dn1,dn2"
+			   rule="sharding-by-intfile">
+			<childTable name="orders" primaryKey="ID" joinKey="customer_id"
+						parentKey="id">
+				<childTable name="order_items" joinKey="order_id"
+							parentKey="id" />
+			</childTable>
+			<childTable name="customer_addr" primaryKey="ID" joinKey="customer_id"
+						parentKey="id" />
+		</table> -->
+		<!-- <table name="oc_call" primaryKey="ID" dataNode="dn1$0-743" rule="latest-month-calldate"
+			/> -->
+		<table name="accesstoken" dataNode="dn1"  />
+		<table name="activity_info" dataNode="dn1"  />
+		<table name="activity_poster" dataNode="dn1"  />
+		<table name="activity_product" dataNode="dn1"  />
+		<table name="activity_spell_order" dataNode="dn1"  />
+		<table name="adv_site" dataNode="dn1"  />
+		<table name="advertisement" dataNode="dn1"  />
+		<table name="agent" dataNode="dn1"  />
+		<table name="agent_server" dataNode="dn1"  />
+		<table name="agent_vender" dataNode="dn1"  />
+		<table name="app_device" dataNode="dn1"  />
+		<table name="app_unpush_message" dataNode="dn1"  />
+		<table name="area_info" dataNode="dn1"  />
+		<table name="area_label" dataNode="dn1"  />
+		<table name="area_name" dataNode="dn1"  />
+		<table name="area_poster" dataNode="dn1"  />
+		<table name="attach" dataNode="dn1"  />
+		<table name="bank_card" dataNode="dn1"  />
+		<table name="bank_city" dataNode="dn1"  />
+		<table name="bank_notify" dataNode="dn1"  />
+		<table name="bank_prefix" dataNode="dn1"  />
+		<table name="bank_province" dataNode="dn1"  />
+		<table name="bank_recharge" dataNode="dn1"  />
+		<table name="bank_transfer" dataNode="dn1"  />
+		<table name="bank_user" dataNode="dn1"  />
+		<table name="book_info" dataNode="dn1"  />
+		<table name="booking" dataNode="dn1"  />
+		<table name="bookmark" dataNode="dn1"  />
+		<table name="bpmdefinition" dataNode="dn1"  />
+		<table name="brand" dataNode="dn1"  />
+		<table name="brand_class" dataNode="dn1"  />
+		<table name="bulletin" dataNode="dn1"  />
+		<table name="bulletin_class" dataNode="dn1"  />
+		<table name="buying" dataNode="dn1"  />
+		<table name="buying_class" dataNode="dn1"  />
+		<table name="common_log" dataNode="dn1"  />
+		<table name="company" dataNode="dn1"  />
+		<table name="company_auth" dataNode="dn1"  />
+		<table name="company_ext" dataNode="dn1"  />
+		<table name="company_identification" dataNode="dn1"  />
+		<table name="company_level" dataNode="dn1"  />
+		<table name="company_price" dataNode="dn1"  />
+		<table name="company_role" dataNode="dn1"  />
+		<table name="complaints" dataNode="dn1"  />
+		<table name="coupon" dataNode="dn1"  />
+		<table name="coupon_draw" dataNode="dn1"  />
+		<table name="cust_channel" dataNode="dn1"  />
+		<table name="cust_grading" dataNode="dn1"  />
+		<table name="cust_label_group" dataNode="dn1"  />
+		<table name="cust_label_list" dataNode="dn1"  />
+		<table name="cust_label_user" dataNode="dn1"  />
+		<table name="cust_verify" dataNode="dn1"  />
+		<table name="customer_visit" dataNode="dn1"  />
+		<table name="custsequence" dataNode="dn1"  />
+		<table name="data_parameter" dataNode="dn1"  />
+		<table name="data_parameter_class" dataNode="dn1"  />
+		<table name="data_parameter_text" dataNode="dn1"  />
+		<table name="download_source" dataNode="dn1"  />
+		<table name="download_source_class" dataNode="dn1"  />
+		<table name="email" dataNode="dn1"  />
+		<table name="email_check" dataNode="dn1"  />
+		<table name="enterprise_stand" dataNode="dn1"  />
+		<table name="expo_class" dataNode="dn1"  />
+		<table name="expo_hall" dataNode="dn1"  />
+		<table name="expo_list" dataNode="dn1"  />
+		<table name="favorite" dataNode="dn1"  />
+		<table name="find_money" dataNode="dn1"  />
+		<table name="find_money_link" dataNode="dn1"  />
+		<table name="goods_receipt_address" dataNode="dn1"  />
+		<table name="group_class" dataNode="dn1"  />
+		<table name="help_list" dataNode="dn1"  />
+		<table name="home_page" dataNode="dn1"  />
+		<table name="hot_news" dataNode="dn1"  />
+		<table name="images" dataNode="dn1"  />
+		<table name="images_class" dataNode="dn1"  />
+		<table name="infolist" dataNode="dn1"  />
+		<table name="inquiry" dataNode="dn1"  />
+		<table name="jobs" dataNode="dn1"  />
+		<table name="jobs_class" dataNode="dn1"  />
+		<table name="key_words" dataNode="dn1"  />
+		<table name="keyword" dataNode="dn1"  />
+		<table name="keyword_info" dataNode="dn1"  />
+		<table name="keyword_product" dataNode="dn1"  />
+		<table name="label_first_setting" dataNode="dn1"  />
+		<table name="label_group" dataNode="dn1"  />
+		<table name="label_list" dataNode="dn1"  />
+		<table name="label_product" dataNode="dn1"  />
+		<table name="label_user" dataNode="dn1"  />
+		<table name="leavewords" dataNode="dn1"  />
+		<table name="links" dataNode="dn1"  />
+		<table name="logistics" dataNode="dn1"  />
+		<table name="logs" dataNode="dn1"  />
+		<table name="logs_record" dataNode="dn1"  />
+		<table name="maxproduct" dataNode="dn1"  />
+		<table name="menu_info" dataNode="dn1"  />
+		<table name="menu_info_copy" dataNode="dn1"  />
+		<table name="message" dataNode="dn1"  />
+		<table name="message_center" dataNode="dn1"  />
+		<table name="message_setting" dataNode="dn1"  />
+		<table name="module" dataNode="dn1"  />
+		<table name="mould" dataNode="dn1"  />
+		<table name="news" dataNode="dn1"  />
+		<table name="news_class" dataNode="dn1"  />
+		<table name="notice_msg" dataNode="dn1"  />
+		<table name="operation_logs" dataNode="dn1"  />
+		<table name="order_list" dataNode="dn1"  />
+		<table name="order_list_sku" dataNode="dn1"  />
+		<table name="out_of_stock" dataNode="dn1"  />
+		<table name="pay_cust_account" dataNode="dn1"  />
+		<table name="pay_type" dataNode="dn1"  />
+		<table name="paylist" dataNode="dn1"  />
+		<table name="payment_bank" dataNode="dn1"  />
+		<table name="product" dataNode="dn1"  />
+		<table name="product_area" dataNode="dn1"  />
+		<table name="product_attr" dataNode="dn1"  />
+		<table name="product_attr_list" dataNode="dn1"  />
+		<table name="product_attr_value" dataNode="dn1"  />
+		<table name="product_attr_value_list" dataNode="dn1"  />
+		<table name="product_class" dataNode="dn1"  />
+		<table name="product_group" dataNode="dn1"  />
+		<table name="product_group_title" dataNode="dn1"  />
+		<table name="product_price" dataNode="dn1"  />
+		<table name="product_sales_volume" dataNode="dn1"  />
+		<table name="product_sales_volume30" dataNode="dn1"  />
+		<table name="product_sales_volume7" dataNode="dn1"  />
+		<table name="product_sales_volume_not_update_list" dataNode="dn1"  />
+		<table name="publish_version" dataNode="dn1"  />
+		<table name="questionnaire" dataNode="dn1"  />
+		<table name="questionnaire_attr" dataNode="dn1"  />
+		<table name="questionnaire_list" dataNode="dn1"  />
+		<table name="recommend_list" dataNode="dn1"  />
+		<table name="recommend_site" dataNode="dn1"  />
+		<table name="return_list" dataNode="dn1"  />
+		<table name="role" dataNode="dn1"  />
+		<table name="role_resource" dataNode="dn1"  />
+		<table name="sales" dataNode="dn1"  />
+		<table name="sales_class" dataNode="dn1"  />
+		<table name="score_list" dataNode="dn1"  />
+		<table name="score_model" dataNode="dn1"  />
+		<table name="score_parameter" dataNode="dn1"  />
+		<table name="search_hot" dataNode="dn1"  />
+		<table name="seller" dataNode="dn1"  />
+		<table name="sequence" dataNode="dn1"  />
+		<table name="service" dataNode="dn1"  />
+		<table name="service_class" dataNode="dn1"  />
+		<table name="shop_class" dataNode="dn1"  />
+		<table name="shop_class_product" dataNode="dn1"  />
+		<table name="shopping_cart_print" dataNode="dn1"  />
+		<table name="site_parameter" dataNode="dn1"  />
+		<table name="sms_send" dataNode="dn1"  />
+		<table name="sms_subscribe" dataNode="dn1"  />
+		<table name="supplier_info" dataNode="dn1"  />
+		<table name="temp" dataNode="dn1"  />
+		<table name="temp_product_sale" dataNode="dn1"  />
+		<table name="temp_up_product" dataNode="dn1"  />
+		<table name="tender" dataNode="dn1"  />
+		<table name="tender_class" dataNode="dn1"  />
+		<table name="terms" dataNode="dn1"  />
+		<table name="terms_auth" dataNode="dn1"  />
+		<table name="terms_class" dataNode="dn1"  />
+		<table name="terms_directory" dataNode="dn1"  />
+		<table name="terms_history" dataNode="dn1"  />
+		<table name="terms_literature" dataNode="dn1"  />
+		<table name="terms_recommend" dataNode="dn1"  />
+		<table name="terms_video" dataNode="dn1"  />
+		<table name="th_application" dataNode="dn1"  />
+		<table name="th_company_account" dataNode="dn1"  />
+		<table name="th_group" dataNode="dn1"  />
+		<table name="th_identifying_code" dataNode="dn1"  />
+		<table name="th_maxproduct_sku" dataNode="dn1"  />
+		<table name="th_maxproduct_sku_list" dataNode="dn1"  />
+		<table name="th_order_code" dataNode="dn1"  />
+		<table name="th_order_combine_deliver" dataNode="dn1"  />
+		<table name="th_order_detail" dataNode="dn1"  />
+		<table name="th_order_detail_sku" dataNode="dn1"  />
+		<table name="th_order_list" dataNode="dn1"  />
+		<table name="th_order_list_comment_log" dataNode="dn1"  />
+		<table name="th_order_paylist" dataNode="dn1"  />
+		<table name="th_payment_detail" dataNode="dn1"  />
+		<table name="th_product_sku" dataNode="dn1"  />
+		<table name="th_product_sku_list" dataNode="dn1"  />
+		<table name="th_sku_attr" dataNode="dn1"  />
+		<table name="th_sku_attr_list" dataNode="dn1"  />
+		<table name="third_order_list" dataNode="dn1"  />
+		<table name="third_order_sku" dataNode="dn1"  />
+		<table name="together_activity" dataNode="dn1"  />
+		<table name="together_activity_bont" dataNode="dn1"  />
+		<table name="together_member" dataNode="dn1"  />
+		<table name="together_member_bont" dataNode="dn1"  />
+		<table name="together_order_list" dataNode="dn1"  />
+		<table name="together_order_list_sku" dataNode="dn1"  />
+		<table name="token" dataNode="dn1"  />
+		<table name="tradetype" dataNode="dn1"  />
+		<table name="trans_charge_list" dataNode="dn1"  />
+		<table name="trans_charge_template" dataNode="dn1"  />
+		<table name="trans_charge_user" dataNode="dn1"  />
+		<table name="used_question" dataNode="dn1"  />
+		<table name="user_info" dataNode="dn1"  />
+		<table name="user_resource" dataNode="dn1"  />
+		<table name="user_role" dataNode="dn1"  />
+		<table name="user_space" dataNode="dn1"  />
+		<table name="user_sub_account" dataNode="dn1"  />
+		<table name="usersequence" dataNode="dn1"  />
+		<table name="v_agent_product" dataNode="dn1"  />
+		<table name="v_agent_product_sku" dataNode="dn1"  />
+		<table name="v_agent_vender" dataNode="dn1"  />
+		<table name="v_class_attr" dataNode="dn1"  />
+		<table name="v_company_logo" dataNode="dn1"  />
+		<table name="v_order_payinfo" dataNode="dn1"  />
+		<table name="v_product_attr" dataNode="dn1"  />
+		<table name="v_product_class" dataNode="dn1"  />
+		<table name="v_product_img" dataNode="dn1"  />
+		<table name="v_product_num_30" dataNode="dn1"  />
+		<table name="v_product_num_all" dataNode="dn1"  />
+		<table name="v_product_price" dataNode="dn1"  />
+		<table name="v_product_sjbm" dataNode="dn1"  />
+		<table name="v_product_unit" dataNode="dn1"  />
+		<table name="v_resource" dataNode="dn1"  />
+		<table name="v_shoppingcart_detail" dataNode="dn1"  />
+		<table name="v_shoppingcart_img" dataNode="dn1"  />
+		<table name="v_shoppingcart_num" dataNode="dn1"  />
+		<table name="v_thorderlist_product" dataNode="dn1"  />
+		<table name="v_thorderlist_product_sku" dataNode="dn1"  />
+		<table name="v_thorderlist_total" dataNode="dn1"  />
+		<table name="vender_brand" dataNode="dn1"  />
+		<table name="video" dataNode="dn1"  />
+		<table name="video_class" dataNode="dn1"  />
+		<table name="visitrecord" dataNode="dn1"  />
+		<table name="visitrecorddetail" dataNode="dn1"  />
+		<table name="weixinuser" dataNode="dn1"  />
+		
+		<table name="proxy_address" dataNode="dn1"  />
+		<table name="proxy_address_detail" dataNode="dn1"  />
+		<table name="proxy_facilitator" dataNode="dn1"  />
+		<table name="proxy_money_fixed" dataNode="dn1"  />
+		<table name="proxy_money_scale" dataNode="dn1"  />
+		<table name="proxy_money_submit" dataNode="dn1"  />
+		<table name="proxy_order_money" dataNode="dn1"  />
+		<table name="proxy_order_money_detail" dataNode="dn1"  />
+		<table name="proxy_product" dataNode="dn1"  />
+		<table name="proxy_user" dataNode="dn1"  />
+	</schema>
+	<!-- <dataNode name="dn1$0-743" dataHost="localhost1" database="db$0-743"
+		/> -->
+	<dataNode name="dn1" dataHost="localhost1" database="b2b2c_v60" />
+	<!-- <dataNode name="dn2" dataHost="localhost1" database="b2b2c_v60_2"/> -->
+	<!-- <dataNode name="dn3" dataHost="localhost1" database="db3" /> -->
+	<!--<dataNode name="dn4" dataHost="sequoiadb1" database="SAMPLE" />
+	 <dataNode name="jdbc_dn1" dataHost="jdbchost" database="db1" />
+	<dataNode	name="jdbc_dn2" dataHost="jdbchost" database="db2" />
+	<dataNode name="jdbc_dn3" 	dataHost="jdbchost" database="db3" /> -->
+	<dataHost name="localhost1" maxCon="1000" minCon="10" balance="3"
+			  writeType="0" dbType="mysql" dbDriver="native" switchType="1" >
+		<heartbeat>select user()</heartbeat>
+		<!-- can have multi write hosts -->
+		<writeHost host="hostM1" url="localhost:10087" user="root" password="ZhaoX88A99">
+			<!-- can have multi read hosts -->
+			<readHost host="hostM2" url="localhost:3307" user="root" password="ZhaoX88A99" />
+		</writeHost> 
+		<!-- <writeHost host="hostS1" url="192.168.1.6:10087" user="root" password="ZhaoX88A99">
+		</writeHost>  -->
+					<!-- <writeHost host="hostS1" url="localhost:3316" user="root"
+				   password="123456" /> -->
+		<!-- <writeHost host="hostM2" url="localhost:3316" user="root" password="123456"/> -->
+	</dataHost>
+	<!--
+		<dataHost name="sequoiadb1" maxCon="1000" minCon="1" balance="0" dbType="sequoiadb" dbDriver="jdbc">
+		<heartbeat> 		</heartbeat>
+		 <writeHost host="hostM1" url="sequoiadb://1426587161.dbaas.sequoialab.net:11920/SAMPLE" user="jifeng" 	password="jifeng"></writeHost>
+		 </dataHost>
+ 
+	  <dataHost name="oracle1" maxCon="1000" minCon="1" balance="0" writeType="0" 	dbType="oracle" dbDriver="jdbc"> <heartbeat>select 1 from dual</heartbeat>
+		<connectionInitSql>alter session set nls_date_format='yyyy-mm-dd hh24:mi:ss'</connectionInitSql>
+		<writeHost host="hostM1" url="jdbc:oracle:thin:@127.0.0.1:1521:nange" user="base" 	password="123456" > </writeHost> </dataHost>
+
+		<dataHost name="jdbchost" maxCon="1000" 	minCon="1" balance="0" writeType="0" dbType="mongodb" dbDriver="jdbc">
+		<heartbeat>select 	user()</heartbeat>
+		<writeHost host="hostM" url="mongodb://192.168.0.99/test" user="admin" password="123456" ></writeHost> </dataHost>
+
+		<dataHost name="sparksql" maxCon="1000" minCon="1" balance="0" dbType="spark" dbDriver="jdbc">
+		<heartbeat> </heartbeat>
+		 <writeHost host="hostM1" url="jdbc:hive2://feng01:10000" user="jifeng" 	password="jifeng"></writeHost> </dataHost> -->
+
+	<!-- <dataHost name="jdbchost" maxCon="1000" minCon="10" balance="0" dbType="mysql"
+		dbDriver="jdbc"> <heartbeat>select user()</heartbeat> <writeHost host="hostM1"
+		url="jdbc:mysql://localhost:3306" user="root" password="123456"> </writeHost>
+		</dataHost> -->
+</mycat:schema>
